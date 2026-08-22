@@ -4,19 +4,28 @@ import java.util.function.Consumer;
 public class filterandreduce {
     public static void main(String[] args) {
         
-        List<String> fruts = List.of("Apple ", "Banana " , "Mango ","Cherry ","date ");
+        List<String> fruts = List.of( "Apple",
+    "Mango",
+    "Banana",
+    "Orange",
+    "Grapes",
+    "Papaya",
+    "Guava",
+    "Pineapple");
 
         System.out.println(fruts.size());
 
         for (String fruts2 : fruts) {
-            System.out.print(fruts2);
-        }System.out.println("Printing fruts using stream");
+           // System.out.print(fruts2);
+        } 
+        //System.out.println("Printing fruts using stream");
 
         /// used print stream 
+        /// // this is used filter apply 
         fruts.stream().forEach(new Consumer<String>() {
             @Override
             public void accept(String s){
-System.out.println(s);
+// System.out.println(s);
             }
           /// used lambda
           
@@ -24,9 +33,11 @@ System.out.println(s);
             
 
         });
+        // filter reduce operations 
         System.out.println("This is used to stram in lambda function");
     fruts.stream()
-      .forEach(fruit -> System.out.println(fruit));
+     .filter(fruit -> fruit.endsWith("a"))
+     .forEach(fruit -> System.out.println(fruit));
         }
 }
 
