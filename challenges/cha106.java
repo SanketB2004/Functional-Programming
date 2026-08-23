@@ -1,5 +1,6 @@
 package challenges;
 
+import java.util.List;
 import java.util.function.BinaryOperator;
 
 /**
@@ -11,10 +12,19 @@ public class cha106 {
 
     public static void main(String[] args) {
         
-      BinaryOperator<Integer> multi = (a , b) -> a*b;
-      
-     int result = multi.apply(2, 2);
-     System.out.println(result);
+      List<String> fruts = List.of( "Apple",
+    "Mango",
+    "Banana",
+    "Orange",
+    "Grapes",
+    "Papaya",
+    "Guava",
+    "Pineapple");
 
+     fruts.stream()
+    .forEach(frut2s -> System.out.println(frut2s));
+
+    
     }
+    
 }
